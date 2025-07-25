@@ -39,7 +39,7 @@ def contact_view(request):
             return render(request,'contact.html',{'form':form,'success_message':success_message})
          else:
              logger.warning('The contact detail is invalid')
-             return render(request,'contact.html',{'form':ContactForm,'name':name,'email':email,'message':message})
+             return render(request,'contact.html',{'form':form,'name':name,'email':email,'message':message})
     
     return render(request,'contact.html')
 
